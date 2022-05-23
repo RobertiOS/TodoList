@@ -12,6 +12,15 @@ struct NewTodoView: View {
     @ObservedObject var viewModel: NewTodoViewModel
     @State private var text: String = ""
     @ObservedObject private var keyboard = KeyboardResponder()
+    
+    private var isButtonDisabled: Bool {
+        text.isEmpty
+    }
+    
+    private var addButtonBackgroundColor: Color {
+        isButtonDisabled ? .gray : .blue
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -25,6 +34,9 @@ struct NewTodoView: View {
                 }
                 .padding(.vertical, 16.0)
                 .frame(minWidth: 0, maxWidth: .infinity)
+                .foregroundColor(.black)
+                .cornerRadius(10)
+
                 Button {
                     self.viewModel.addNewTodo(title: text)
                     self.presentationMode.wrappedValue.dismiss()
@@ -33,12 +45,17 @@ struct NewTodoView: View {
                 }
                 .padding(.vertical, 16.0)
                 .frame(minWidth: 0, maxWidth: .infinity)
+                .background(addButtonBackgroundColor)
+                .disabled(isButtonDisabled)
+                .foregroundColor(.black)
+                .cornerRadius(10)
             }
             
         }
         .padding()
         .padding(.bottom, keyboard.currentHeight)
-        .animation(.easeOut(duration: keyboard.duration)) // 3
+        // TODO: Deprecated init
+        .animation(.easeOut(duration: keyboard.duration))
     }
 }
 

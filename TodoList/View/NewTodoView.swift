@@ -11,7 +11,7 @@ struct NewTodoView: View {
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @ObservedObject var viewModel: NewTodoViewModel
     @State private var text: String = ""
-
+    @ObservedObject private var keyboard = KeyboardResponder()
     var body: some View {
         VStack {
             Spacer()
@@ -37,6 +37,8 @@ struct NewTodoView: View {
             
         }
         .padding()
+        .padding(.bottom, keyboard.currentHeight)
+        .animation(.easeOut(duration: keyboard.duration)) // 3
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TodoRow: View {
-    @State var todo: Todo
+    var todo: Todo
     var body: some View {
         HStack {
             Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")

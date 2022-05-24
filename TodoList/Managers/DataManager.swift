@@ -24,7 +24,11 @@ extension DataManagerProtocol {
 class DataManager {
     static let shared: DataManagerProtocol = DataManager()
     
-    private var todos = [Todo]()
+    private var todos = [Todo]() {
+        didSet {
+            print(todos.count)
+        }
+    }
     
     private init() { }
 }

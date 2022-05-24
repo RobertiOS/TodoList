@@ -33,7 +33,7 @@ final class TodoListViewModel: ObservableObject {
 extension TodoListViewModel: TodoListViewModelProtocol {
 
     func fetchTodos() {
-        todos = dataManager.fetchTodoList(includingCompleted: showCompleted)
+            todos = dataManager.fetchTodoList(includingCompleted: showCompleted)
     }
 
     func toggleIsCompleted(for todo: Todo) {

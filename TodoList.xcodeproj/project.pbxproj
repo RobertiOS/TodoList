@@ -18,6 +18,7 @@
 		E1671AE4283B03C300B9E090 /* NewTodoViewModel.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671AE3283B03C300B9E090 /* NewTodoViewModel.swift.swift */; };
 		E1671AE6283B0A4A00B9E090 /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671AE5283B0A4A00B9E090 /* NewTodoView.swift */; };
 		E1671AE9283B15D700B9E090 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671AE8283B15D700B9E090 /* KeyboardResponder.swift */; };
+		E1671AEB283C59C400B9E090 /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671AEA283C59C400B9E090 /* TodoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E1671AE3283B03C300B9E090 /* NewTodoViewModel.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewModel.swift.swift; sourceTree = "<group>"; };
 		E1671AE5283B0A4A00B9E090 /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 		E1671AE8283B15D700B9E090 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		E1671AEA283C59C400B9E090 /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		E1671AD4283AECA300B9E090 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1671AEA283C59C400B9E090 /* TodoRow.swift */,
 				E1671AE5283B0A4A00B9E090 /* NewTodoView.swift */,
 				E1671AD5283AECB900B9E090 /* TodoListView.swift */,
 			);
@@ -213,6 +216,7 @@
 				E1671ADC283AED5800B9E090 /* DataManager.swift in Sources */,
 				E1671AE9283B15D700B9E090 /* KeyboardResponder.swift in Sources */,
 				E1671ABB283AEB1E00B9E090 /* TodoListApp.swift in Sources */,
+				E1671AEB283C59C400B9E090 /* TodoRow.swift in Sources */,
 				E1671AD6283AECB900B9E090 /* TodoListView.swift in Sources */,
 				E1671AE6283B0A4A00B9E090 /* NewTodoView.swift in Sources */,
 			);

@@ -18,13 +18,27 @@ struct TodoListView: View {
             Image(systemName: "plus")
         }
     }
+    
+    private var showCompletedButton: some View {
+        Button {
+            self.viewModel.showCompleted.toggle()
+        } label: {
+            Image(systemName: self.viewModel.showCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+        }
+    }
+    
     var body: some View {
         NavigationView {
             List(viewModel.todos) { todo in
-                Text(todo.title)
+                Button {
+                    self.viewModel.toggleIsCompleted(for: todo)
+                } label: {
+                    TodoRow(todo: todo)
+                }
+                .buttonStyle(.plain)
             }
             .navigationTitle(Text("Todo list"))
-            .navigationBarItems(trailing: addnewButton)
+            .navigationBarItems(leading: showCompletedButton, trailing: addnewButton)
         }
         .onAppear {
             viewModel.fetchTodos()

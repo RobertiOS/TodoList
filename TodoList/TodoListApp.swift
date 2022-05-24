@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TodoListApp: App {
+    let context = CoreDataHelper.shared.persistentContainer.viewContext
     var body: some Scene {
         WindowGroup {
             TodoListView()
+                .environment(\.managedObjectContext, context)
         }
     }
 }

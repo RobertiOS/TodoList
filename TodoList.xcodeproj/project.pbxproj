@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11CB2A2283C80A400A3D66F /* DBHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11CB2A0283C809100A3D66F /* DBHelper.framework */; };
+		E11CB2A3283C80A400A3D66F /* DBHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E11CB2A0283C809100A3D66F /* DBHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E13A1DD6283C77BC00B9744F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A1DD2283C77BB00B9744F /* CoreDataHelper.swift */; };
+		E13A1DD7283C77BC00B9744F /* DemoToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E13A1DD3283C77BB00B9744F /* DemoToDoList.xcdatamodeld */; };
+		E13A1DD8283C77BC00B9744F /* TodoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A1DD5283C77BC00B9744F /* TodoMO.swift */; };
 		E1671ABB283AEB1E00B9E090 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671ABA283AEB1E00B9E090 /* TodoListApp.swift */; };
 		E1671ABF283AEB2000B9E090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1671ABE283AEB2000B9E090 /* Assets.xcassets */; };
 		E1671AC2283AEB2000B9E090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1671AC1283AEB2000B9E090 /* Preview Assets.xcassets */; };
@@ -21,7 +26,35 @@
 		E1671AEB283C59C400B9E090 /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1671AEA283C59C400B9E090 /* TodoRow.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E11CB29F283C809100A3D66F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E11CB29B283C809000A3D66F /* DBHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E13A1DC4283C732100B9744F;
+			remoteInfo = DBHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E11CB2A4283C80A400A3D66F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E11CB2A3283C80A400A3D66F /* DBHelper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E11CB29B283C809000A3D66F /* DBHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DBHelper.xcodeproj; path = Modules/DBHelper/DBHelper.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E13A1DD2283C77BB00B9744F /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E13A1DD4283C77BC00B9744F /* DemoToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoToDoList.xcdatamodel; sourceTree = "<group>"; };
+		E13A1DD5283C77BC00B9744F /* TodoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoMO.swift; sourceTree = "<group>"; };
 		E1671AB7283AEB1E00B9E090 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1671ABA283AEB1E00B9E090 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		E1671ABE283AEB2000B9E090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,17 +75,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11CB2A2283C80A400A3D66F /* DBHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11CB29C283C809000A3D66F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E11CB2A0283C809100A3D66F /* DBHelper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E11CB2A1283C80A400A3D66F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E13A1DD1283C778900B9744F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E13A1DD2283C77BB00B9744F /* CoreDataHelper.swift */,
+				E13A1DD3283C77BB00B9744F /* DemoToDoList.xcdatamodeld */,
+				E13A1DD5283C77BC00B9744F /* TodoMO.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		E1671AAE283AEB1E00B9E090 = {
 			isa = PBXGroup;
 			children = (
 				E1671AB9283AEB1E00B9E090 /* TodoList */,
 				E1671AB8283AEB1E00B9E090 /* Products */,
+				E11CB2A1283C80A400A3D66F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +127,7 @@
 		E1671AB9283AEB1E00B9E090 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				E13A1DD1283C778900B9744F /* Core Data */,
 				E1671AE7283B15C400B9E090 /* Helper */,
 				E1671ADA283AECF600B9E090 /* ViewModel */,
 				E1671AD9283AECED00B9E090 /* Model */,
@@ -83,6 +144,7 @@
 		E1671AC0283AEB2000B9E090 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E11CB29B283C809000A3D66F /* DBHelper.xcodeproj */,
 				E1671AC1283AEB2000B9E090 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -149,6 +211,7 @@
 				E1671AB3283AEB1E00B9E090 /* Sources */,
 				E1671AB4283AEB1E00B9E090 /* Frameworks */,
 				E1671AB5283AEB1E00B9E090 /* Resources */,
+				E11CB2A4283C80A400A3D66F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,12 +248,28 @@
 			mainGroup = E1671AAE283AEB1E00B9E090;
 			productRefGroup = E1671AB8283AEB1E00B9E090 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E11CB29C283C809000A3D66F /* Products */;
+					ProjectRef = E11CB29B283C809000A3D66F /* DBHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E1671AB6283AEB1E00B9E090 /* TodoList */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E11CB2A0283C809100A3D66F /* DBHelper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DBHelper.framework;
+			remoteRef = E11CB29F283C809100A3D66F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E1671AB5283AEB1E00B9E090 /* Resources */ = {
@@ -209,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13A1DD8283C77BC00B9744F /* TodoMO.swift in Sources */,
+				E13A1DD7283C77BC00B9744F /* DemoToDoList.xcdatamodeld in Sources */,
 				E1671AE4283B03C300B9E090 /* NewTodoViewModel.swift.swift in Sources */,
 				E1671AE0283AEDA100B9E090 /* Todo.swift in Sources */,
 				E1671AE2283AEDC500B9E090 /* TodoListViewModel.swift in Sources */,
@@ -217,6 +298,7 @@
 				E1671AE9283B15D700B9E090 /* KeyboardResponder.swift in Sources */,
 				E1671ABB283AEB1E00B9E090 /* TodoListApp.swift in Sources */,
 				E1671AEB283C59C400B9E090 /* TodoRow.swift in Sources */,
+				E13A1DD6283C77BC00B9744F /* CoreDataHelper.swift in Sources */,
 				E1671AD6283AECB900B9E090 /* TodoListView.swift in Sources */,
 				E1671AE6283B0A4A00B9E090 /* NewTodoView.swift in Sources */,
 			);
@@ -421,6 +503,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E13A1DD3283C77BB00B9744F /* DemoToDoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E13A1DD4283C77BC00B9744F /* DemoToDoList.xcdatamodel */,
+			);
+			currentVersion = E13A1DD4283C77BC00B9744F /* DemoToDoList.xcdatamodel */;
+			path = DemoToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E1671AAF283AEB1E00B9E090 /* Project object */;
 }

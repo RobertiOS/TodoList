@@ -22,6 +22,6 @@ final class NewTodoViewModel: ObservableObject {
 
 extension NewTodoViewModel: NewTodoViewModelProtocol {
     func addNewTodo(title: String) {
-        dataManager.add(title: title)
+        dataManager.addTodo(title: title)
     }
 }
